@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ProductListFragment">
+
+    <fragment
+        android:id="@+id/ProductListFragment"
+        android:name="com.productfinder.ui.fragment.ProductListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_product_list">
+
+        <!-- <argument
+             android:name="selectedProduct"
+             app:argType="com.productfinder.models.Product" />
+         <action
+             android:id="@+id/action_ProductListFragment_to_SearchResultFragment"
+             app:destination="@id/SearchResultFragment" />-->
+        <!-- <action
+             android:id="@+id/action_ProductListFragment_to_ProductDetailsFragment"
+             app:destination="@id/ProductDetailsFragment" />-->
+
+        <action
+            android:id="@+id/action_ProductListFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />
+        <action
+            android:id="@+id/action_ProductListFragment_to_SearchResultFragment"
+            app:destination="@id/SearchResultFragment" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ProductListFragment_to_SearchResultFragment2"
+            app:destination="@id/SearchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchResultFragment"
+        android:name="com.productfinder.ui.fragment.ProductsSearchResultFragment"
+        android:label="@string/search_result"
+        tools:layout="@layout/fragment_search_result">
+
+
+        <argument
+            android:name="searchKeyword"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_SearchResultFragment_to_ProductListFragment"
+            app:destination="@id/ProductListFragment"
+            app:popUpTo="@id/ProductListFragment" />
+        <action
+            android:id="@+id/action_SearchResultFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />
+        <!--<action
+            android:id="@+id/action_SearchResultFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/ProductDetailsFragment"
+        android:name="com.productfinder.ui.fragment.ProductDetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

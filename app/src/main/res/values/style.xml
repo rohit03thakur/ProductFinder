@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="productTextViewStyle">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+
+    </style>
+
+    <style name="productTitleStyle" parent="productTextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="productImageViewStyle">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:background">@color/bgImageColor</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="productRatingBarStyle" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:numStars">5</item>
+        <item name="android:progressTint">#ffcc01</item>
+
+    </style>
+
+    <style name="productPriceViewStyle" parent="productTextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="productDiscountViewStyle" parent="productTextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/discountColor</item>
+    </style>
+
+    <style name="productDescriptionViewStyle" parent="productTextViewStyle">
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/description_color</item>
+
+
+    </style>
+
+    <style name="recentProductViewStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+</resources>

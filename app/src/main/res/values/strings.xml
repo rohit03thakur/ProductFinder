@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ProductFinder</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Products</string>
+    <string name="second_fragment_label">Product Details</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="product_image">product image</string>
+    <string name="price">\u20B9 %.2f</string>
+    <string name="discount">%.2f%% <b>off</b> %s</string>
+    <string name="search_product">Search product</string>
+    <string name="recent_searched_products">Recently Visited Product</string>
+    <string name="search_products">Search Products</string>
+    <string name="search_validation_error_msg">Please enter text</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_result">Search Result</string>
+    <string name="rating_description">Rating from customers</string>
+    <string name="no_internet_available">No Internet Connection.</string>
+    <string name="no_recent_item_msg">Display product that you recently visited. Review them anytime.</string>
+
+
+</resources>

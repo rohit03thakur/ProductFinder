@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.productfinder.models.Product" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:context=".ui.fragment.ProductDetailsFragment">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/productTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@{product.title}"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                style="@style/productDescriptionViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginBottom="0dp"
+                android:text="@{product.description}"
+                tools:text="Description" />
+
+            <RatingBar
+                android:id="@+id/ratingBarProduct"
+                style="@style/productRatingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDescription"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="163dp"
+                android:contentDescription="@string/rating_description"
+                android:rating="@{product.rating}" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.5dp"
+                android:layout_width="409dp"
+                android:layout_height="300dp"
+                android:layout_below="@id/ratingBarProduct"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <!--  <ImageView
+                      imageUrl="@{product.thumbnail}"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:contentDescription="@string/product_image"
+                      tools:src="@drawable/img_placeholder" />-->
+
+                <include
+                    android:id="@+id/imgLayout"
+                    layout="@layout/image_container_view" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                style="@style/productDiscountViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView"
+                android:layout_marginTop="16dp"
+                android:text="@{String.format(@string/discount,product.discountPercentage,product.price)}"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/productPriceViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDiscount"
+                android:layout_marginStart="8dp"
+                android:text="@{String.format(@string/price, product.discountedPrice)}"
+                tools:text="TextView" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvNoDataAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:text="No Data found" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.Material3.CircularProgressIndicator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progressBarColor"
+            android:visibility="visible" />
+    </FrameLayout>
+</layout>

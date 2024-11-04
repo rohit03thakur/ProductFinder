@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">@color/dark</color>
+    <color name="purple_500">@color/darker</color>
+    <color name="purple_700">@color/darker</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="description_color">@color/textColor</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="progressBarColor">#D8750C</color>
+    <color name="secondaryColor">#6e6e6e</color>
+    <color name="discountColor">@color/textColor</color>
+    <color name="colorCardBackground">@color/darker</color>
+    <color name="bgImageColor">#C5B6B6</color>
+    <color name="bgLayoutColor">@color/black</color>
+    <color name="dark">#313C44</color>
+    <color name="darker">#151B20</color>
+    <color name="textColor">@color/white</color>
+    <color name="tabLightColor">@color/dark</color>
+    <color name="tabLayoutColor">@color/tabLightColor</color>
+</resources>

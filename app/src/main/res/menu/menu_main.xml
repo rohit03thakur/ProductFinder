@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.productfinder.ui.activity.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/search_product"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="collapseActionView|always"
+        app:closeIcon="@null"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+         />
+</menu>
